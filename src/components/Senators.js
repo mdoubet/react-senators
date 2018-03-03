@@ -1,9 +1,22 @@
 import React, { Component } from 'react'
+import senators from '../data/senators'
+import Senator from './Senator'
 
 export default class extends Component {
-    render(){
+    renderSenators(){
         return (
-            <div>Test the Senators Component</div>
+            senators.map(senator =>
+                <Senator senator={senator}/>
+
+            //     {/**/}
+            )
+        )
+    }
+
+    render(){
+        const senators = this.renderSenators();
+        return (
+            <div>{senators}</div>
         );
     }
 }
