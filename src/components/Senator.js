@@ -6,7 +6,7 @@ export default class extends Component {
     render(){
         const senator = this.props.senator
         return (
-            <div>{senator.person.nickname ? senator.person.nickname : senator.person.firstname} {senator.person.lastname}</div>
+            <div>{senator.person.nickname ? senator.person.nickname : senator.person.firstname} {senator.person.lastname} from {senator.state}</div>
         );
     }
 }
