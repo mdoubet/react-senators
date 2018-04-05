@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 export default class extends Component {
     constructor(props){
         super(props);
-        this.state = {searchText: ''};
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event){
         this.props.onChange(event);
-    }
-    handleSubmit(event){
 
     }
+    handleSubmit() {
+        this.setState({value: ''})
+    }
+
 
 
     render(){
@@ -24,7 +24,7 @@ export default class extends Component {
                     Find Senator:
                     <input type="text" value={this.props.ssValue} onChange={this.handleChange} />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Reset" />
             </form>
         )
     }
